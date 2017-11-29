@@ -1,17 +1,17 @@
-package controllers;
+package com.del.service.controllers;
 
-import models.Menu;
+import com.del.service.models.Menu;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import repositories.MenuRepository;
+import com.del.service.repositories.MenuRepository;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class MenuController {
 
-    private MenuRepository menuRepository;
+    private final MenuRepository menuRepository;
 
     @Autowired
     public MenuController(MenuRepository menuRepository) {
