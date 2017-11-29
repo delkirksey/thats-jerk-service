@@ -1,17 +1,30 @@
 package models;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
+
+@Entity
+@Table(name = "menuitems")
 public class MenuItem {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotNull
     private String name;
 
-    private String idescription;
+    @NotNull
+    private String description;
 
+    @NotNull
     private Double price;
 
+    @Null
     private Double minPrice;
 
+    @Null
     private Double maxPrice;
 
     public MenuItem() {
@@ -33,12 +46,12 @@ public class MenuItem {
         this.name = name;
     }
 
-    public String getIdescription() {
-        return idescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setIdescription(String idescription) {
-        this.idescription = idescription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Double getPrice() {
