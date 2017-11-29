@@ -1,4 +1,4 @@
-package models;
+package com.del.service.models;
 
 
 import javax.persistence.*;
@@ -16,7 +16,6 @@ public class Menu {
     @NotNull
     private String title;
 
-    @Null
     private String description;
 
     public Menu() {

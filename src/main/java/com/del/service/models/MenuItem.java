@@ -1,4 +1,4 @@
-package models;
+package com.del.service.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,16 +16,22 @@ public class MenuItem {
     private String name;
 
     @NotNull
+    private String type;
+
+    @NotNull
     private String description;
 
     @NotNull
     private Double price;
 
-    @Null
+
     private Double minPrice;
 
-    @Null
+
     private Double maxPrice;
+
+    @NotNull
+    private String menu;
 
     public MenuItem() {
     }
@@ -78,5 +84,19 @@ public class MenuItem {
         this.maxPrice = maxPrice;
     }
 
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getMenu() {
+        return menu;
+    }
+
+    public void setMenu(String menu) {
+        this.menu = menu;
+    }
 }

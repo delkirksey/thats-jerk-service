@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "trucklocations")
-public class TruckLocations {
+public class TruckLocation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,7 +19,6 @@ public class TruckLocations {
     @NotNull
     private Date endDate;
 
-    @Null
     private String locationName;
 
     @NotNull
@@ -31,7 +30,7 @@ public class TruckLocations {
     @NotNull
     private String state;
 
-    public TruckLocations() {
+    public TruckLocation() {
     }
 
     public long getId() {
