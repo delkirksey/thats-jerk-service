@@ -1,6 +1,6 @@
-package repositories;
+package com.del.service.repositories;
 
-import models.Menu;
+import com.del.service.models.Menu;
 
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
