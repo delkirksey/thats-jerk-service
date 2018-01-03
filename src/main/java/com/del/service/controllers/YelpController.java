@@ -1,6 +1,5 @@
 package com.del.service.controllers;
 
-import com.del.service.models.Menu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpEntity;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 @RestController
 public class YelpController {
