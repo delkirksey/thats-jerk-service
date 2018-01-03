@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -17,6 +18,11 @@ public class TruckLocationsController {
     @Autowired
     public TruckLocationsController(TruckLocationsRepository truckLocationsRepository) {
         this.truckLocationsRepository = truckLocationsRepository;
+    }
+
+    @ModelAttribute
+    public void setCORSResponseHeader(HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
     }
 
     @GetMapping("trucklocations")

@@ -1,7 +1,6 @@
 package com.del.service.controllers;
 
 import com.del.service.models.MenuItem;
-import com.del.service.repositories.MenuItemRepository;
 import com.del.service.services.MenuItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -19,6 +19,11 @@ public class MenuItemController {
     @Autowired
     public MenuItemController(MenuItemService menuItemService) {
         this.menuItemService = menuItemService;
+    }
+
+    @ModelAttribute
+    public void setCORSResponseHeader(HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
     }
 
     @PostMapping("menuitem")
