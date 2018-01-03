@@ -21,12 +21,9 @@ public class MenuItem {
     @NotNull
     private String description;
 
-    @NotNull
     private Double price;
 
-
     private Double minPrice;
-
 
     private Double maxPrice;
 
